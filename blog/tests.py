@@ -15,7 +15,7 @@ class TestView(TestCase):
         navbar = soup.nav
 
         self.assertIn('Blog', navbar.text)
-        self.assertIn('About me', navbar.text)
+        self.assertIn('About Me', navbar.text)
 
         # 게시물이 없다면(0개)
         self.assertEqual(Post.objects.count(), 0)
