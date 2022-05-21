@@ -73,7 +73,7 @@ class Comment(models.Model):
         if self.author.socialaccount_set.exists():
             return self.author.socialaccount_set.first().get_avatar_url()
         else:
-            return 'https://doitdjango.com/avatar/id/787/d6375267df987db2/svg/guest@email.com'
+            return 'https://doitdjango.com/avatar/id/787/d6375267df987db2/svg/{{self.author.email}}'
 
 # class ReComment(models.Model):
 #     comment = models.ForeignKey(Comment, on_delete=models.CASCADE)
