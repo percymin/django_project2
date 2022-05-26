@@ -347,7 +347,7 @@ class TestView(TestCase):
 
         self.assertEqual('Edit Comment - Blog', soup.title.text)
         update_comment_form = soup.find('form', id='comment-form')
-        content_textarea = update_comment_form.find('textarea', 'id=id_content')
+        content_textarea = update_comment_form.find('textarea', id='id_content')
         self.assertIn(self.comment_001.content, content_textarea.text)
 
         response = self.client.post(
