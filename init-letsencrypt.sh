@@ -5,7 +5,7 @@ if ! [ -x "$(command -v docker-compose)" ]; then
   exit 1
 fi
 
-domains=(3.34.209.87)
+domains=(percymin.com www.percymin.com)
 rsa_key_size=4096
 data_path="./data/certbot"
 email="sammymin@naver.com" # Adding a valid address is strongly recommended
